@@ -2,12 +2,11 @@
 Define function: reverseStr(someStr)
 Reverse and return the String. */
 function reverseStr(someStr) {
-    let reversedString = ``
-    let reverseArrayOfString = new Array(someStr.length)
-    for(let i = 0; i<someStr.length; i++){
-        reverseArrayOfString[someStr.length-i-1] = someStr[i]
+    let stringArray = new Array(someStr.length)
+    for(let character of someStr){
+        stringArray.push(character)
     }
-    return reverseArrayOfString.join("")
+    return stringArray.reverse().join("")
 }
 
 
