@@ -21,5 +21,59 @@ Example for printShape("Diamond", 5, "*");
   * 
 */
 function printShape(shape, height, character) {
+  switch (shape) {
+    case `Square`:
+      drawSquare(height, character)
+      break
+    case `Triangle`:
+      drawTriangle(height, character)
+    break
+    case `Diamond`:
+      drawDiamond(height, character)
+    break;
   
+    default:
+      break;
+  }
 }
+
+function drawSquare(height, character){
+  for(let i = 0; i<height; i++){
+    console.log(stringMultiple(height,character))
+  }
+}
+
+function drawTriangle(height, character){
+  for(let i = 1; i<=height; i++){
+    console.log(stringMultiple(i, character))
+  }
+}
+
+function drawDiamond(height, character){
+  for(let i = 0; i<Math.floor(height/2); i++){
+    let preSpaces = Math.floor(height/2-i)
+    console.log(`${stringMultiple(preSpaces, ` `)}${stringMultiple(1+2*i, character)}`)
+  }
+  if(height%2!=0){
+    console.log(stringMultiple(height, character))
+  }
+  for(let i = Math.floor(height/2)-1; i>=0; i--){
+    let preSpaces = Math.floor(height/2-i)
+    console.log(`${stringMultiple(preSpaces, ` `)}${stringMultiple(1+2*i, character)}`)
+  }
+}
+
+function stringMultiple(number, character){
+  let multipleArray = new Array()
+  for(let i = 0; i<number; i++) {
+    multipleArray.push(character)
+  }
+  return multipleArray.join(``)
+}
+
+
+printShape("Square", 4, "%")
+console.log()
+printShape("Triangle", 4, "$")
+console.log()
+printShape("Diamond", 6, "*")
