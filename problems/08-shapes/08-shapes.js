@@ -50,15 +50,14 @@ function drawTriangle(height, character){
 }
 
 function drawDiamond(height, character){
-  for(let i = 0; i<Math.floor(height/2); i++){
-    let preSpaces = Math.floor(height/2-i)
+  let halfHeight = Math.floor(height/2)
+  for(let i = 0; i<halfHeight; i++){
+    let preSpaces = halfHeight-i
     console.log(`${stringMultiple(preSpaces, ` `)}${stringMultiple(1+2*i, character)}`)
   }
-  if(height%2!=0){
-    console.log(stringMultiple(height, character))
-  }
-  for(let i = Math.floor(height/2)-1; i>=0; i--){
-    let preSpaces = Math.floor(height/2-i)
+  console.log(stringMultiple(height, character))
+  for(let i = halfHeight-1; i>=0; i--){
+    let preSpaces = halfHeight-i
     console.log(`${stringMultiple(preSpaces, ` `)}${stringMultiple(1+2*i, character)}`)
   }
 }
@@ -72,8 +71,9 @@ function stringMultiple(number, character){
 }
 
 
-printShape("Square", 4, "%")
+// Basic Tests
+printShape("Square", 5, "%")
 console.log()
-printShape("Triangle", 4, "$")
+printShape("Triangle", 5, "$")
 console.log()
-printShape("Diamond", 6, "*")
+printShape("Diamond", 7, "*")

@@ -2,6 +2,8 @@
 Define function: fib(n) 
 Return the nth number in the fibonacci sequence. */
 function fib(n) {
+    if(typeof(n)!==`number`)
+        return 0
     if(n===0)
         return 0
     if(n===1)
@@ -10,6 +12,8 @@ function fib(n) {
 }
 
 function fibAdder(n, firstNumber, secondNumber) {
+    if(typeof(n)!==`number`||typeof(firstNumber)!==`number`||typeof(secondNumber)!==`number`)
+        return 0
     if(n===0) {
         return secondNumber
     }

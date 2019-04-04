@@ -3,6 +3,9 @@ Define function: bubbleSort(numArray)
 Use the bubble sort algorithm to sort the array.
 Return the sorted array. */
 function bubbleSort(numArray) {
+    if(!Array.isArray(numArray)){
+        return
+    }
     for(let i = 0; i<numArray.length; i++){
         let maxElement = numArray.length-i-1;
         for(let j = 0; j<maxElement; j++){
