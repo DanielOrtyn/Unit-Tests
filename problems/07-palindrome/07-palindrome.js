@@ -6,7 +6,7 @@ function isPalindrome(someStr) {
         return false
   
     for(let i = 0; i<someStr.length; i++){
-        if(!(someStr[i] === someStr[someStr.length-i-1])){
+        if(someStr[i] !== someStr[someStr.length-i-1]){
             return false
         }
     }
