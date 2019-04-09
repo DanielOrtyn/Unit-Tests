@@ -2,7 +2,7 @@
 Define function: bubbleSort(numArray)
 Use the bubble sort algorithm to sort the array.
 Return the sorted array. */
-function bubbleSort(numArray) {
+export function bubbleSort(numArray) {
     if(!Array.isArray(numArray)){
         return
     }
@@ -18,10 +18,3 @@ function bubbleSort(numArray) {
     }
 }
 
-
-// Basic Test
-let testArray = [7,8,5,6,3,9,0,4,2,1]
-
-console.log(testArray)
-bubbleSort(testArray)
-console.log(testArray)

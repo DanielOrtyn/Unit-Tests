@@ -1,7 +1,7 @@
 /* 1. Fibonacci
 Define function: fib(n) 
 Return the nth number in the fibonacci sequence. */
-function fib(n) {
+export function fib(n) {
     if(typeof(n)!==`number`)
         return 0
     if(n===0)
@@ -18,11 +18,4 @@ function fibAdder(n, firstNumber, secondNumber) {
         return secondNumber
     }
     return fibAdder(n-1, secondNumber, firstNumber + secondNumber)
-}
-
-
-
-// basic test
-for(let i = 0; i<10; i++){
-    console.log(fib(i))
 }

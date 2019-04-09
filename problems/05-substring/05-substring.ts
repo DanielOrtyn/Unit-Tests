@@ -3,7 +3,7 @@ Define function substring(someStr, startIndex, endIndex)
 Return the substring contained between startIndex (inclusive) and endIndex (exclusive).
 If incorrect input is entered, throw an exception stating the input was incorrect.
 For example substring('hello', 0, 3) should give 'hel' */
-function substring(someStr, startIndex, endIndex) {
+export function substring(someStr, startIndex, endIndex) {
     if(typeof(someStr)!==`string`){
         throw `First argument is \"${typeof(someStr)}\" not a string`
     }
@@ -29,9 +29,3 @@ function substring(someStr, startIndex, endIndex) {
     }
     return subStringArray.join(``)
 }
-
-
-// basic test
-let testString = `0123456`
-// console.log(testString)
-console.log(substring(testString,6,7))

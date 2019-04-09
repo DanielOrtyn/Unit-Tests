@@ -1,7 +1,7 @@
 /* 4. Factorial
 Define function: factorial(someNum)
 Use recursion to compute and return the factorial of someNum.  */
-function factorial(sumNum) {
+export function factorial(sumNum) {
     if(typeof(sumNum)!==`number`)
         return 1
 
@@ -11,8 +11,3 @@ function factorial(sumNum) {
 }
 
 
-
-// Basic Test
-for(let i = 1; i<7; i++){
-    console.log(factorial(i))
-}

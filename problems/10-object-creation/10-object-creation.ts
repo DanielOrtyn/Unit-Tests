@@ -15,15 +15,11 @@ let objFunction = new FunctionCreation("Function Creation", 11)
 
 
 class ES6Class {
+    name: string
+    age: number
     constructor(newName, newAge){
         this.name = newName,
         this.age = newAge
     }
 }
 let es6Object = new ES6Class('ES6 Class, Object', 12);
-
-
-// Basic Test
-console.log(objLiteral)
-console.log(objFunction)
-console.log(es6Object)

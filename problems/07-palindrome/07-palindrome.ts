@@ -1,7 +1,7 @@
 /* 7. Palindrome
 Define function isPalindrome(someStr)
 Return true if someStr is a palindrome, otherwise return false */
-function isPalindrome(someStr) {
+export function isPalindrome(someStr) {
     if(typeof(someStr)!==`string`)
         return false
   
@@ -12,7 +12,3 @@ function isPalindrome(someStr) {
     }
     return true
 }
-
-// basic test
-console.log(isPalindrome(`test`))
-console.log(isPalindrome(`kayak`))
